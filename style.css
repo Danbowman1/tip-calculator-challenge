@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+:root {
+    --bgColor: hsl(185, 41%, 84%);
+    --primary: hsl(183, 100%, 15%);
+    --calculations: hsl(172, 67%, 45%);
+    --inputColor: hsl(189, 41%, 97%);
+    --active: hsl(172, 42%, 72%);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bgColor);
+}
+
+
+.logo {
+    display: flex;
+    margin: 40px auto;
+}
+
+.container {
+    width: 50%;
+    min-height: 435px;
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.input-container {
+    width: 48%;
+    min-width: 310px;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bill img {
+    height: 4rem;
+    padding: 1.5rem;
+    position: absolute;
+}
+
+.label {
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 4px;
+}
+
+.error-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#error{
+    color: hsl(24, 80%, 52%);
+}
+
+.input {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--inputColor);
+    font-size: 24px;
+    text-align: end;
+    color: hsl(184, 14%, 56%);
+}
+
+.input:focus {
+    outline: 2px solid var(--calculations)
+}
+
+::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+.tip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tipBtn {
+    width: 30%;
+    padding: 10px ;
+    border-radius: 5px;
+    border: none;
+    background: var(--primary);
+    color: white;
+}
+
+.active-tip {
+    background-color: var(--active);
+    color: var(--primary);
+}
+
+.customInput{
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--inputColor);
+    text-align: center;
+    color: var(--primary);
+}
+
+.output-container {
+    width: 48%;
+    min-width: 310px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary);
+    border-radius: 15px;
+}
+
+.calculations {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-desc p {
+    font-size: 14px;
+    color: white;
+}
+
+.amount-desc small {
+    color: hsla(185, 41%, 84%, 0.582);
+    font-size: 12px;
+}
+
+.amount-numbers {
+    font-size: 32px;
+    color: var(--calculations);
+}
+
+.reset {
+    padding: 6px;
+    border-radius: 5px;
+    background-color: var(--active);
+    text-transform: uppercase;
+}
