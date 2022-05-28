@@ -7,17 +7,18 @@ const tipBtn = document.querySelectorAll('.tipBtn')
 const resetBtn = document.getElementById('resetBtn')
 const error = document.getElementById('error')
 
-
+// Event Listeners
 billInput.addEventListener('input', billInputHandler)
 peopleInput.addEventListener('input', peopleInputHandler)
 tipBtn.forEach(function(val){
-    val.addEventListener('click', handleClick)
+    val.addEventListener('click', handleClick) //Puts event listener on all tip buttons
 })
 
 customInput.addEventListener('input', tipInputHandler)
 
 resetBtn.addEventListener('click', reset)
 
+// Intital values
 billInput.value = '0'
 peopleInput.value = '1'
 tipPerPerson.innerHTML = '$' + (0.0).toFixed(2)
@@ -29,17 +30,18 @@ let tipValue;
 
 function billInputHandler() {
     billValue = parseFloat(billInput.value)
-    calculateTip()
-    resetBtn.disabled = false
+    calculateTip() 
+    resetBtn.disabled = false // removes disabled from reset button on input
 }
 
 function peopleInputHandler() {
     peopleValue = parseFloat(peopleInput.value)
     calculateTip()
 
+    // error border if people value is less then 1
     if(peopleValue < 1){
         error.hidden = false
-        peopleInput.style.border = '2px solid hsl(24, 80%, 52%)'
+        peopleInput.style.border = '3px solid hsl(24, 80%, 52%)'
         peopleInput.blur()
     } else {
         error.hidden = true
@@ -49,7 +51,7 @@ function peopleInputHandler() {
 }
 
 function tipInputHandler() {
-    tipValue = parseFloat(customInput.value / 100)
+    tipValue = parseFloat(customInput.value / 100) 
 
     tipBtn.forEach(function(val){
         val.classList.remove('active-tip')
@@ -68,6 +70,7 @@ function handleClick(e) {
     calculateTip()
 }
 
+// Calculations
 function calculateTip() {
     if(peopleValue >= 1){
         let tipAmount = (billValue * tipValue) / peopleValue

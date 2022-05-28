@@ -18,16 +18,23 @@ body {
     background-color: var(--bgColor);
 }
 
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .logo {
-    display: flex;
-    margin: 40px auto;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .container {
-    width: 50%;
-    min-height: 435px;
-    min-width: 375px;
+    width: 38%;
+    min-height: 450px;
+    min-width: 350px;
     margin: 0 auto;
     padding: 32px;
     display: flex;
@@ -39,7 +46,8 @@ body {
 
 .input-container {
     width: 48%;
-    min-width: 310px;
+    min-width: 280px;
+    margin: 0 auto;
     padding: 8px 0;
     display: flex;
     flex-direction: column;
@@ -124,7 +132,8 @@ body {
 
 .output-container {
     width: 48%;
-    min-width: 310px;
+    min-width: 280px;
+    margin: 0 auto;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -165,4 +174,13 @@ body {
     border-radius: 5px;
     background-color: var(--active);
     text-transform: uppercase;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    color: var(--primary);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
 }
