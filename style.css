@@ -33,7 +33,7 @@ body {
 
 .container {
     width: 38%;
-    min-height: 450px;
+    min-height: 400px;
     min-width: 350px;
     margin: 0 auto;
     padding: 32px;
@@ -188,5 +188,11 @@ body {
 @media  (min-width: 1200px) {
     .container {
         width: 800px
+    }
+}
+
+@media  (max-height: 645px) {
+    .container {
+        min-height: 600px;
     }
 }
